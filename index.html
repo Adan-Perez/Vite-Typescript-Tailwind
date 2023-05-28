@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS + Tailwind</title>
+  </head>
+  <body class="bg-slate-900 text-white">
+    <!-- Task Form -->
+    <div class="flex justify-center items-center h-screen gap-x-2">
+      <form id="taskForm" class="bg-slate-700 rounded-md p-10 max-w-md">
+        <h3 class="text-md mb-4 font-bold">Save a Task</h3>
+        <label for="title" class="block">Title:</label>
+        <input
+          type="text"
+          name="title"
+          class="bg-slate-800 px-1 py-2 rounded-md block mb-2 placeholder:px-2"
+          autofocus
+          placeholder="Write a title"
+        />
+
+        <label for="description" class="block">Description:</label>
+        <textarea
+          name="description"
+          rows="3"
+          class="bg-slate-800 px-1 py-2 rounded-md block w-full mb-2 placeholder:px-2"
+          placeholder="Write a description"
+        ></textarea>
+
+        <button class="bg-indigo-600 px-3 py-1 rounded-md hover:bg-indigo-300">
+          Save
+        </button>
+      </form>
+
+      <!-- Task List -->
+
+      <div
+        id="tasksList"
+        class="bg-slate-500 rounded-md max-w-md w-full p-10 h-3/5 overflow-y-scroll"
+      ></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
